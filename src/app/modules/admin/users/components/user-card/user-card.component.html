@@ -1,0 +1,39 @@
+<div class="user-card">
+    <div class="first-row">
+        <img *ngIf="user.profilePicture"
+             src="https://i.insider.com/5ca389adc6cc503c5a53fd96?width=500&format=jpeg&auto=webp"
+             alt="">
+
+        <div *ngIf="!user.profilePicture"
+             class="initials">
+            {{user.fullName | initials}}
+        </div>
+
+        <div class="details">
+            <span class="fullname">{{user.fullName}}</span>
+            <span class="email">{{user.email}}</span>
+            <span class="phone">{{user.phoneNumber}}</span>
+        </div>
+    </div>
+
+    <div class="roles">
+        <span *ngFor="let role of user.roles"
+              class="badge primary">{{role}}</span>
+    </div>
+
+    <div class="options">
+        <button mat-icon-button
+                [matMenuTriggerFor]="menu"
+                aria-label="Example icon-button with a menu">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+                <span>Edit</span>
+            </button>
+            <button mat-menu-item>
+                <span>Delete</span>
+            </button>
+        </mat-menu>
+    </div>
+</div>

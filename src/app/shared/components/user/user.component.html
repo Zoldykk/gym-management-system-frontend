@@ -1,0 +1,10 @@
+<div class="user">
+    <img *ngIf="imgPath"
+         [src]="imgPath"
+         alt="">
+
+    <span *ngIf="!imgPath"
+          class="initials">{{fullName | initials}}</span>
+
+    <span class="font-medium">{{fullName}}</span>
+</div>

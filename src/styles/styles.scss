@@ -1,0 +1,66 @@
+/* ----------------------------------------------------------------------------------------------------- */
+/*  @ Import/write your custom styles here.
+/*  @ Styles from this file will override 'vendors.scss' and Fuse's base styles.
+/* ----------------------------------------------------------------------------------------------------- */
+
+@import './components/badge.scss';
+
+.custom-modalbox {
+    mat-dialog-container {
+        position: absolute !important;
+        right: 0 !important;
+        left: unset !important;
+        padding: 0 !important;
+        width: 30vw !important;
+
+    }
+
+    mat-dialog-content {
+        height: 95% !important;
+        padding: 20px 0 !important;
+        margin-bottom: auto !important;
+    }
+}
+
+.page-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    h3 {
+        font-size: 22px;
+        font-weight: bold;
+
+        span {
+            font-size: 14px;
+            color: #94a3b8;
+            font-weight: 400;
+        }
+    }
+}
+
+.table-container {
+    border-radius: 1rem !important;
+    overflow: hidden;
+
+    thead th {
+        color: #65758c !important;
+        background-color: #e2e8f0 !important;
+    }
+
+    tbody tr:hover {
+        background-color: red !important;
+        cursor: pointer !important;
+    }
+
+    tr {
+
+        td {
+            padding: 20px !important;
+        }
+    }
+
+    // tr:nth-child(odd) {
+    //     background-color: red !important;
+    // }
+}
